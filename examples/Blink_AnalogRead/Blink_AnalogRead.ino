@@ -2,11 +2,13 @@
 
 /********************************************************************
  *   define two tasks for Blink & AnalogRead
- */
+ *******************************************************************/
 void TaskBlink( void *pvParameters );
 void TaskAnalogRead( void *pvParameters );
 
-/* the setup function runs once when you press reset or power the board */
+/************************************************************************
+*   the setup function runs once when you press reset or power the board 
+*************************************************************************/
 void setup() 
 {
     /* initialize serial communication at 9600 bits per second */
@@ -48,27 +50,27 @@ void TaskBlink(void *pvParameters)
     (void) pvParameters;
   
     /*
-    Blink
-    Turns on an LED on for one second, then off for one second, repeatedly.
-  
-    Most Arduinos have an on-board LED you can control. On the UNO, LEONARDO, MEGA, and ZERO 
-    it is attached to digital pin 13, on MKR1000 on pin 6. LED_BUILTIN takes care 
-    of use the correct LED pin whatever is the board used.
-    
-    The MICRO does not have a LED_BUILTIN available. For the MICRO board please substitute
-    the LED_BUILTIN definition with either LED_BUILTIN_RX or LED_BUILTIN_TX.
-    e.g. pinMode(LED_BUILTIN_RX, OUTPUT); etc.
-    
-    If you want to know what pin the on-board LED is connected to on your Arduino model, check
-    the Technical Specs of your board  at https://www.arduino.cc/en/Main/Products
-    
-    This example code is in the public domain.
-  
-    modified 8 May 2014
-    by Scott Fitzgerald
-    
-    modified 2 Sep 2016
-    by Arturo Guadalupi
+        Blink
+        Turns on an LED on for one second, then off for one second, repeatedly.
+      
+        Most Arduinos have an on-board LED you can control. On the UNO, LEONARDO, MEGA, and ZERO 
+        it is attached to digital pin 13, on MKR1000 on pin 6. LED_BUILTIN takes care 
+        of use the correct LED pin whatever is the board used.
+        
+        The MICRO does not have a LED_BUILTIN available. For the MICRO board please substitute
+        the LED_BUILTIN definition with either LED_BUILTIN_RX or LED_BUILTIN_TX.
+        e.g. pinMode(LED_BUILTIN_RX, OUTPUT); etc.
+        
+        If you want to know what pin the on-board LED is connected to on your Arduino model, check
+        the Technical Specs of your board  at https://www.arduino.cc/en/Main/Products
+        
+        This example code is in the public domain.
+      
+        modified 8 May 2014
+        by Scott Fitzgerald
+        
+        modified 2 Sep 2016
+        by Arturo Guadalupi
     */
   
     /* Initialize digital LED_BUILTIN on pin 13 as an output. */
@@ -89,12 +91,12 @@ void TaskAnalogRead(void *pvParameters)
     (void) pvParameters;
     
     /*
-    AnalogReadSerial
-    Reads an analog input on pin 0, prints the result to the serial monitor.
-    Graphical representation is available using serial plotter (Tools > Serial Plotter menu)
-    Attach the center pin of a potentiometer to pin A0, and the outside pins to +5V and ground.
-  
-    This example code is in the public domain.
+        AnalogReadSerial
+        Reads an analog input on pin 0, prints the result to the serial monitor.
+        Graphical representation is available using serial plotter (Tools > Serial Plotter menu)
+        Attach the center pin of a potentiometer to pin A0, and the outside pins to +5V and ground.
+      
+        This example code is in the public domain.
     */
   
     while(true)
